@@ -1,3 +1,14 @@
+<?php
+require('connectdb.php');
+require('database.php');
+?>
+
+<?php
+if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['major'])){
+         addUser($_POST[firstName], $_POST[middleName], $_POST[lastName], $_POST[major], $_POST[school], $_POST[year], $_POST[phoneNumber], $_POST[email]);
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +23,12 @@
 <body>
 <div class="container">
 <h1>Users</h1>
-<form action="form-processing.php" method="post"> 
+<form action="./simpleform.php" method="post"> 
   <div class="form-group">
     First Name 
-    <input type="text" class="form-control" firstName="firstName" required />    
+    <input type="text" class="form-control" firstName="firstName" required />   
+    Middle Name 
+    <input type="text" class="form-control" lastName="middleName" required /> 
     Last Name 
     <input type="text" class="form-control" lastName="lastName" required />  
     Major
