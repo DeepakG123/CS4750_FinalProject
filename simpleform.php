@@ -5,7 +5,8 @@ require('database.php');
 
 <?php
 if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['major'])){
-         addUser($_POST[firstName], $_POST[middleName], $_POST[lastName], $_POST[major], $_POST[school], $_POST[year], $_POST[phoneNumber], $_POST[email]);
+         echo "<p>Gets here</p>";
+         addUser($_POST['firstName'], $_POST['middleName'], $_POST['lastName'], $_POST['major'], $_POST['school'], $_POST['year'], $_POST['phoneNumber'], $_POST['email']);
   }
 ?>
 
@@ -26,21 +27,21 @@ if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['
 <form action="./simpleform.php" method="post"> 
   <div class="form-group">
     First Name 
-    <input type="text" class="form-control" firstName="firstName" required />   
+    <input type="text" class="form-control" name="firstName" required />   
     Middle Name 
-    <input type="text" class="form-control" lastName="middleName" required /> 
+    <input type="text" class="form-control" name="middleName" required /> 
     Last Name 
-    <input type="text" class="form-control" lastName="lastName" required />  
+    <input type="text" class="form-control" name="lastName" required />  
     Major
-    <input type="text" class="form-control" major="major" required />  
+    <input type="text" class="form-control" name="major" required />  
     School
-    <input type="text" class="form-control" school="school" required />  
+    <input type="text" class="form-control" name="school" required />  
     Year
-    <input type="text" class="form-control" year="year" required />  
+    <input type="text" class="form-control" name="year" required />  
     Phone Number
-    <input type="text" class="form-control" phoneNumber="phoneNumber" required />  
+    <input type="text" class="form-control" name="phoneNumber" required />  
     Email
-    <input type="text" class="form-control" email="email" required />     
+    <input type="text" class="form-control" name="email" required />     
   </div>  
      
   <input type="submit" value="Save info" class="btn btn-dark" />  
