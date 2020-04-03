@@ -14,7 +14,10 @@ $dsn = "mysql:host=$host;dbname=$dbname";
 /** connect to the database **/
 try 
 {
-   $db = new PDO($dsn, $username, $password);   
+   $db = new PDO($dsn, $username, $password);
+   $result = $db->query("SELECT * FROM users")->fetch(); 
+   echo $result[0]; 
+   //$db = new mysqli($host,$username,$password,$dbname);  
    echo "<p>You are connected to the database</p>";
 }
 catch (PDOException $e)     // handle a PDO exception (errors thrown by the PDO library)

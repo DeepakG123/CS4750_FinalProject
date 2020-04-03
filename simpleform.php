@@ -23,8 +23,9 @@ if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['
 
 <body>
 <div class="container">
-<h1>Users</h1>
+<h1>Add Interview </h1>
 <form action="./simpleform.php" method="post"> 
+  <h2>Add User</h2>
   <div class="form-group">
     First Name 
     <input type="text" class="form-control" name="firstName" required />   
